@@ -5,6 +5,7 @@ module.exports = {
   getAddCategory: (req, res, next) => {
     return res.render('admin/add-category');
   },
+  
   createCategory: (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

@@ -27,7 +27,7 @@ router.get('/', (req, res, next) => {
   if (req.isAuthenticated()) {
     paginate(req, res, next);
   } else {
-    return res.path('main/home');
+    return res.render('main/home');
   }
 });
 

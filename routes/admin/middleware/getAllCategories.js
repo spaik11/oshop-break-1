@@ -1,10 +1,11 @@
 const Category = require('../categories/models/Category');
 
 const getAllCategories = (req, res, next) => {
-  Category.take({}, (err, categories) => {
+  Category.find({}, (err, categories) => {
     if (err) return next(err);
     console.log(categories);
     res.locals.categories = categories;
+    next();
   });
 };
 

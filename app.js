@@ -16,7 +16,6 @@ const adminRouter = require('./routes/admin/adminRoutes');
 const productRouter = require('./routes/admin/products/productRouter');
 
 const getAllCategories = require('./routes/admin/middleware/getAllCategories');
-
 const app = express();
 require('dotenv').config();
 
@@ -63,7 +62,6 @@ app.use((req, res, next) => {
   res.locals.errors = req.flash('error');
   res.locals.message = req.flash('message');
   res.locals.success = req.flash('success');
-
   next();
 });
 
